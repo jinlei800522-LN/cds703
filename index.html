@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>贪吃蛇</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hud">
+      <h1>贪吃蛇</h1>
+      <div class="stats">
+        <div class="stat">
+          <span class="label">分数</span>
+          <span id="score">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">最高</span>
+          <span id="high">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="board-wrap">
+      <canvas id="board" width="480" height="480" aria-label="游戏区域"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-title">贪吃蛇</p>
+        <p id="overlay-hint">按空格或点击开始</p>
+        <button id="start-btn" type="button">开始游戏</button>
+      </div>
+    </div>
+
+    <p class="help">方向键 / WASD 控制 · 空格暂停 · 撞墙或撞到自己即结束</p>
+
+    <div class="pad" aria-label="触屏方向键">
+      <button type="button" data-dir="up">↑</button>
+      <div class="pad-mid">
+        <button type="button" data-dir="left">←</button>
+        <button type="button" data-dir="down">↓</button>
+        <button type="button" data-dir="right">→</button>
+      </div>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
